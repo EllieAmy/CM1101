@@ -196,13 +196,13 @@ def print_menu(exits, room_items, inv_items):
         print_exit(direction, exit_leads_to(exits, direction))
 
     for room_items in room:
-        idname=item["id"] for item in items
-        itemname=item["name"] for item in items
+        idname=(item["id"] for item in items)
+        itemname=(item["name"] for item in items)
         print("TAKE", idname, "to take", itemname)
     
     for inv_items in room:
-        idname=item["id"] for item in player
-        itemname=item["name"] for item in player
+        idname=(item["id"] for item in player)
+        itemname=(item["name"] for item in player)
         print("DROP", idname, "to drop", itemname) 
     
     
