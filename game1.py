@@ -164,11 +164,7 @@ def is_valid_exit(exits, user_input):
     >>> is_valid_exit(rooms["Parking"]["exits"], "east")
     True
     """
-    valid=False
-    for exit in exits:
-        if user_input==exit:
-            valid=True
-    print(valid)    
+    return user_input in exits
 
 
 
